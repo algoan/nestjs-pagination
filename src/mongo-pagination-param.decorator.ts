@@ -7,7 +7,7 @@ const DEFAULT_NUMBER_OF_RESULTS: number = 10;
 /**
  * Mongo query
  */
-export interface MongoQuery {
+export interface MongoPagination {
   filter: {};
   limit: number;
   skip: number;
@@ -16,7 +16,7 @@ export interface MongoQuery {
 
 // tslint:disable-next-line:variable-name
 export const MongoPaginationParamDecorator: () => ParameterDecorator = createParamDecorator(
-  (_data: {}, req: Request): MongoQuery => {
+  (_data: {}, req: Request): MongoPagination => {
     const page: number = Number(req.query.page) || FIRST_PAGE;
     const limit: number = Number(req.query.per_page) || DEFAULT_NUMBER_OF_RESULTS;
     let filter: {};
