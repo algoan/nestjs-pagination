@@ -26,7 +26,7 @@ export const MongoPaginationParamDecorator: () => ParameterDecorator = createPar
       filter = req.query.filter !== undefined ? JSON.parse(req.query.filter) : {};
       sort = req.query.sort !== undefined ? JSON.parse(req.query.sort) : [];
     } catch (exception) {
-      throw new BadRequestException();
+      throw new BadRequestException('The sort or filter parameter cannot be parsed');
     }
 
     return {

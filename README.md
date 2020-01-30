@@ -68,7 +68,7 @@ Content-Range: data 300-399/1015
 Link: </data?page=1&per_page=100>; rel="first", </data?page=11&per_page=100>; rel="last", </data?page=5&per_page=100>; rel="next", </data?page=3&per_page=100>; rel="prev"
 ```
 
-If you use MongoDB as your database, we also provide `ParamDecorator` you can use to convert the request to a mongo query parameter.
+If you use MongoDB as your database, we also provide a `ParamDecorator` you can use to convert the request to a mongo query parameter.
 ```typescript
 import { LinkHeaderInterceptor, MongoPaginationParamDecorator, MongoPagination } from '@algoan/nestjs-pagination';
 import { Controller, Get, UseInterceptors } from '@nestjs/common';
