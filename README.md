@@ -8,6 +8,8 @@
 
 # NestJS Request Pagination
 
+**DEPRECATED**: This repository is now part of the [Algoan NestJS Lerna](https://github.com/algoan/nestjs-components) package. It won't be maintained anymore.
+
 A simple NestJS interceptor catching query parameters and format a Link Header, based on [GitHub](https://developer.github.com/v3/guides/traversing-with-pagination/) pagination API.
 This module uses [format-link-header](https://github.com/jonathansamines/format-link-header) node module to build the response Link Header.
 
